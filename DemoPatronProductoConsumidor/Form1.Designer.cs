@@ -39,7 +39,7 @@
             dgvUsuarios = new DataGridView();
             Id = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
-            Correo = new DataGridViewTextBoxColumn();
+            Tipo = new DataGridViewTextBoxColumn();
             Fecha = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -141,7 +141,7 @@
             dgvUsuarios.AllowUserToDeleteRows = false;
             dgvUsuarios.BackgroundColor = Color.Silver;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, Correo, Fecha });
+            dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, Tipo, Fecha });
             dgvUsuarios.Dock = DockStyle.Fill;
             dgvUsuarios.GridColor = SystemColors.InactiveCaption;
             dgvUsuarios.Location = new Point(0, 0);
@@ -162,11 +162,11 @@
             Nombre.Name = "Nombre";
             Nombre.ReadOnly = true;
             // 
-            // Correo
+            // Tipo
             // 
-            Correo.HeaderText = "Correo";
-            Correo.Name = "Correo";
-            Correo.ReadOnly = true;
+            Tipo.HeaderText = "Tipo";
+            Tipo.Name = "Tipo";
+            Tipo.ReadOnly = true;
             // 
             // Fecha
             // 
@@ -201,10 +201,10 @@
         private Button BtnRegistrar;
         private Panel panel2;
         private DataGridView dgvUsuarios;
+        private Button BtnProcesar;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Correo;
+        private DataGridViewTextBoxColumn Tipo;
         private DataGridViewTextBoxColumn Fecha;
-        private Button BtnProcesar;
     }
 }
